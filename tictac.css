@@ -8,7 +8,8 @@
 
 body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    background-color: rgb(212, 212, 212);
+    background-image: url(./assets/bg-img-unsplash.jpg);
+    background-size: cover;
     height: 100vh;
 }
 
@@ -20,4 +21,34 @@ body {
 
 .container > * {
     padding: 0 5%;
+}
+
+
+/* group elements */
+.header,
+.footer {
+    background-color: rgb(255, 255, 255);
+    justify-items: center;
+    align-content: center;
+}
+
+
+/* header */
+.header {
+    font-family: "Outfit";
+    box-shadow: 0px 5px 18px rgb(88, 88, 88);
+}
+
+
+/* display area */
+
+
+
+/* footer */
+.footer {
+    box-shadow: 0px -5px 18px rgb(88, 88, 88);
+}
+
+small {
+    text-align: center;
 }

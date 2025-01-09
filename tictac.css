@@ -9,11 +9,13 @@
 body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     background-color: rgb(212, 212, 212);
+    height: 100vh;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 4rem 6fr 3rem;
 }
 
 .container > * {

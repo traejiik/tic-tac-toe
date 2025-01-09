@@ -10,3 +10,12 @@ body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     background-color: rgb(212, 212, 212);
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container > * {
+    padding: 0 5%;
+}

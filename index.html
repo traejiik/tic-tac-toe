@@ -15,21 +15,37 @@
         </header>
         <main class="disp-area">
             <div class="sidebar">
-                <div class="announce"></div>
-                <div class="scorebar">
-                    <div class="players">
-                        <h3 class="player1-name"></h3>
-                        <div class="score1"></div>
-                    </div>
-                    <div class="players">
-                        <h3 class="player2-name"></h3>
-                        <div class="score2"></div>
-                    </div>
+                <div class="game-init">
+                    <h2 class="heading">Tic-Tac-Toe</h2>
+                    <form id="game-info">
+                        <div class="form-field">
+                            <label for="player1-name">Player 1 Name</label>
+                            <input id="player1-name" type="text">
+                        </div>
+                        <div class="form-field">
+                            <label for="player2-name">Player 2 Name</label>
+                            <input id="player2-name" type="text">
+                        </div>
+                        <button class="game-start" type="submit">Start game</button>
+                    </form>
                 </div>
-                <div class="btn-ctn">
-                    <button class="new-game">new game</button>
-                    <button class="reset">reset scores</button>
-                    <button class="change-names">new player names</button>
+                <div class="game-active">
+                    <div class="announce"></div>
+                    <div class="scorebar">
+                        <div class="players">
+                            <h3 class="name player1-name"></h3>
+                            <div class="scores score1"></div>
+                        </div>
+                        <div class="players">
+                            <h3 class="name player2-name"></h3>
+                            <div class="scores score2"></div>
+                        </div>
+                    </div>
+                    <div class="btn-ctn">
+                        <button class="new-game">new game</button>
+                        <button class="reset">reset scores</button>
+                        <button class="change-names">new player names</button>
+                    </div>
                 </div>
             </div>
             <div class="game-container">

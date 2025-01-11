@@ -48,6 +48,10 @@ body {
     box-shadow: 0px 5px 18px rgb(88, 88, 88);
 }
 
+.title {
+    font-weight: 500;
+}
+
 
 /* display area */
 .disp-area {
@@ -218,9 +222,6 @@ button:hover {
 /* footer */
 .footer {
     box-shadow: 0px -5px 18px rgb(88, 88, 88);
-}
-
-small {
     text-align: center;
 }
 

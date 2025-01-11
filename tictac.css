@@ -41,11 +41,6 @@ body {
     border-radius: 0.7rem;
 }
 
-.reset,
-.change-names {
-    background-color: #405862;
-}
-
 
 /* header */
 .header {
@@ -67,12 +62,74 @@ body {
     height: 100%;
     padding: 1.5rem;
     justify-self: start;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.game-init {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.name-input {
+    width: 100%;
+    height: 3rem;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border: 1px solid #405862;
+}
+
+.game-start-btn {
+    background-color: #f38e66;
 }
 
 .game-active {
-    display: none;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    opacity: 0;
+    transform: scaleY(0);
     flex-direction: column;
     gap: 4rem;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.active {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+    transform: scaleY(100%);
 }
 
 .announce {
@@ -124,6 +181,10 @@ button {
 
 .new-game {
     background-color: #f38e66;
+}
+
+.reset {
+    background-color: #405862;
 }
 
 button:hover {

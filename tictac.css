@@ -223,3 +223,8 @@ button:hover {
 small {
     text-align: center;
 }
+
+a {
+    color: #f38e66;
+    text-decoration: none;
+}

@@ -41,6 +41,11 @@ body {
     border-radius: 0.7rem;
 }
 
+.reset,
+.change-names {
+    background-color: #405862;
+}
+
 
 /* header */
 .header {
@@ -59,9 +64,70 @@ body {
 
 .sidebar {
     width: 100%;
-    justify-self: start;
-    padding: 1.5rem;
     height: 100%;
+    padding: 1.5rem;
+    justify-self: start;
+}
+
+.game-active {
+    display: none;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.announce {
+    height: 4rem;
+    font-family: "Outfit", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.scorebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    height: 8.5rem;
+}
+
+.players {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    text-transform: capitalize;
+}
+
+.scores {
+    font-size: 6rem;
+}
+
+.btn-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+button {
+    width: 9rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.new-game {
+    background-color: #f38e66;
+}
+
+button:hover {
+   filter: brightness(90%);
 }
 
 .game-container {

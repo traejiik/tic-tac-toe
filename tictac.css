@@ -223,6 +223,9 @@ button:hover {
 .game-container div:nth-last-child(-n + 3) { border-bottom: none; }
 .game-container div:nth-child(3n + 1) { border-left: none; }
 
+.winner {
+    background-color: rgba(2, 203, 234, 0.3);
+}
 
 /* footer */
 .footer {

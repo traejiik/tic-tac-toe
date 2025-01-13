@@ -44,6 +44,27 @@ const setGame = (function () {
     const newGameBtn = document.querySelector(".new-game");
     const resetScoresBtn = document.querySelector(".reset");
 
+    startBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        gameInit.classList.remove("active");
+        gameActive.classList.add("active");
+        setPlayers();
+        gameBoard.createBoard();
+    });
+
+    newGameBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        gameActive.classList.remove("active");
+        gameInit.classList.add("active");
+        gameBoard.resetBoard();
+    });
+
+    resetScoresBtn.addEventListener("click", () => {
+        resetScores();
+    });
+
+    let player1, player2
+
     function createPlayer(name, symbol) {
         return { name, symbol, score: 0 };
     }
@@ -52,19 +73,14 @@ const setGame = (function () {
         const playerOneName = document.querySelector("#player1-name").value;
         const playerTwoName = document.querySelector("#player2-name").value;
 
-        const player1 = createPlayer(playerOneName, "X");
-        const player2 = createPlayer(playerTwoName, "O");
+        player1 = createPlayer(playerOneName, "X");
+        player2 = createPlayer(playerTwoName, "O");
 
         gameLogic.init(player1, player2);
+        updateScoreDisp();
 
         document.querySelector(".player1-name").textContent = player1.name;
         document.querySelector(".player2-name").textContent = player2.name;
-        updateScoreDisp();
-
-        return {
-            player1,
-            player2,
-        };
     }
 
     function resetScores() {
@@ -77,25 +93,6 @@ const setGame = (function () {
         document.querySelector(".score1").textContent = player1.score;
         document.querySelector(".score2").textContent = player2.score;
     }
-
-    startBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        gameInit.classList.remove("active");
-        gameActive.classList.add("active");
-        setPlayers();
-        gameboard.createBoard();
-    });
-
-    newGameBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        gameActive.classList.remove("active");
-        gameInit.classList.add("active");
-        gameboard.resetBoard();
-    });
-
-    resetScoresBtn.addEventListener("click", () => {
-        resetScores();
-    });
 
     return {
         updateScoreDisp,
@@ -110,7 +107,7 @@ const gameLogic = (function () {
         player1 = p1;
         player2 = p2;
         currentPlayer = player1
-        updateScoreDisp();
+        updatePlayerDisp();
     }
 
     function getCurrentPlayer() {

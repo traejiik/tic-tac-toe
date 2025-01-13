@@ -112,5 +112,18 @@ const gameLogic = (function () {
         updateScoreDisp();
     }
 
+    function getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    function switchPlayer() {
+        currentPlayer = currentPlayer === player1 ? player2 : player1;
+        updatePlayerDisp();
+    }
+
+    function updatePlayerDisp() {
+        document.querySelector('.announce').textContent = `${currentPlayer.name}'s turn (${currentPlayer.symbol})`;
+    }
+
     
 })();

@@ -157,7 +157,7 @@ const gameLogic = (function () {
             gameBoard.resetBoard();
             gameBoard.createBoard();
             document.querySelector('.announce').textContent = `${player1.name}'s turn (${player1.symbol})`
-        }, 10000);
+        }, 6000);
     }
 
     function announceDraw() {
@@ -167,7 +167,7 @@ const gameLogic = (function () {
             gameBoard.resetBoard();
             gameBoard.createBoard();
             document.querySelector('.announce').textContent = `${player1.name}'s turn (${player1.symbol})`
-        }, 10000);
+        }, 6000);
     }
 
     function showWinCells(combo) {

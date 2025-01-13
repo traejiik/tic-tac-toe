@@ -150,4 +150,26 @@ const gameLogic = (function () {
         const board = gameBoard.getboard();
         return board.every((cell) => cell !== '');
     }
+
+    function announceWinner() {
+        document.querySelector('.announce').textContent = `${currentPlayer.name} wins!`;
+        currentPlayer.score += 1;
+        setGame.updateScoreDisp();
+
+        setTimeout(() => {
+            gameBoard.resetBoard();
+            gameBoard.createBoard();
+        }, 10000);
+    }
+
+    function announceDraw() {
+        document.querySelector('.announce').textContent = "It's a draw!";
+
+        setTimeout(() => {
+            gameBoard.resetBoard();
+            gameBoard.createBoard();
+        }, 10000);
+    }
+
+    
 })();

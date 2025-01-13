@@ -156,6 +156,7 @@ const gameLogic = (function () {
         setTimeout(() => {
             gameBoard.resetBoard();
             gameBoard.createBoard();
+            document.querySelector('.announce').textContent = `${player1.name}'s turn (${player1.symbol})`
         }, 10000);
     }
 
@@ -165,6 +166,7 @@ const gameLogic = (function () {
         setTimeout(() => {
             gameBoard.resetBoard();
             gameBoard.createBoard();
+            document.querySelector('.announce').textContent = `${player1.name}'s turn (${player1.symbol})`
         }, 10000);
     }
 

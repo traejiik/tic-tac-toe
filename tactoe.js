@@ -103,5 +103,14 @@ const setGame = (function () {
 
 // Game Logic module
 const gameLogic = (function () {
+    let player1, player2, currentPlayer;
+
+    function init(p1, p2) {
+        player1 = p1;
+        player2 = p2;
+        currentPlayer = player1
+        updateScoreDisp();
+    }
+
     
 })();

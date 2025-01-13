@@ -171,5 +171,28 @@ const gameLogic = (function () {
         }, 10000);
     }
 
-    
+    function showWinCells(combo) {
+        combo.forEach((index) => {
+            document.querySelectorAll('.grid-box')[index].classList.add('winner');
+        });
+    }
+
+    function checkGameStatus() {
+        if (checkWinner()) {
+            announceWinner();
+            return true;
+        }
+        if (checkDraw()) {
+            announceDraw();
+            return true;
+        }
+        return false;
+    }
+
+    return {
+        init,
+        getCurrentPlayer,
+        switchPlayer,
+        checkGameStatus,
+    };
 })();

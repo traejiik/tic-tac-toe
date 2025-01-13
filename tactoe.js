@@ -4,13 +4,20 @@ const gameBoard = (function () {
     const currentBoard = ["", "", "", "", "", "", "", "", ""];
 
     function createBoard() {
-        boardCells.forEach((cell) => {
-            cell.addEventListener("click");
+        boardCells.forEach((cell, index) => {
+            cell.addEventListener("click", () => cellClick(index), {
+                once: true,
+            });
         });
     }
 
-    function cellClick() {
+    function cellClick(index) {
         if (currentBoard[index] === "") {
+            currentBoard[index] = gameLogic.getCurrentPlayer().symbol;
+            boardCells[index].textContent = currentBoard[index];
+
+            if (gameLogic.checkGameStatus()) return;
+            gameLogic.switchPlayer();
         }
     }
 

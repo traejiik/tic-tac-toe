@@ -100,3 +100,8 @@ const setGame = (function () {
         updateScoreDisp,
     }
 })();
+
+// Game Logic module
+const gameLogic = (function () {
+    
+})();
